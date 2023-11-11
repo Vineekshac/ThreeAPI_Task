@@ -1,18 +1,11 @@
-//const JSDOM = require('jsdom').JSDOM;
-import JSDOM from "jsdom";
-const dom = new JSDOM('<html><head></head><body></body></html>');
-
-// The simulated document object
-const document = dom.window.document;
-
-let btn1 = dom.getElementsByClassName("btn")[0];
-let btn2 = dom.getElementsByClassName("btn")[1];
-let btn3 = dom.getElementsByClassName("btn")[2];
+let btn1 = document.getElementsByClassName("btn")[0];
+let btn2 = document.getElementsByClassName("btn")[1];
+let btn3 = document.getElementsByClassName("btn")[2];
 btn1.addEventListener("click", getjoke);
 btn2.addEventListener("click", getfox);
 btn3.addEventListener("click", getdog);
 
-let jokeres = dom.getElementsByClassName("result")[0];
+let jokeres = document.getElementsByClassName("result")[0];
 
 async function getjoke() {
   const jokes = async () => {
@@ -34,7 +27,7 @@ async function getfox() {
   };
   const f = await foxes();
   let ff = f.image;
-  let img1 = dom.getElementsByClassName("result")[1];
+  let img1 = document.getElementsByClassName("result")[1];
 
   img1.style.backgroundImage = "url(" + ff + ")";
 }
@@ -46,6 +39,6 @@ async function getdog() {
   };
   const d = await dogs();
   let dd = d.url;
-  let img2 = dom.getElementsByClassName("result")[2];
+  let img2 = document.getElementsByClassName("result")[2];
   img2.style.backgroundImage = "url(" + dd + ")";
 }
