@@ -5,5 +5,10 @@
   },
   "scripts": {
     "build": "node index.js" 
-}
+},
+  "name": "my-project",
+  "version": "1.0.0",
+  "dependencies": {
+    "jsdom": "^29.5.0"
+  }
 }
