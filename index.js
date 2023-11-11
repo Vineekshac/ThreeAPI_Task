@@ -1,5 +1,5 @@
-const JSDOM = require('jsdom').JSDOM;
-
+//const JSDOM = require('jsdom').JSDOM;
+import JSDOM from "jsdom";
 const dom = new JSDOM('<html><head></head><body></body></html>');
 
 // The simulated document object
